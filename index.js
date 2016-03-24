@@ -11,7 +11,7 @@ function is(x) {
     noop();
 
     var thirteenStrings = [
-        1101, // Binary 13
+        '1101', // Binary 13
         "https://scontent.cdninstagram.com/hphotos-xtf1/t51.2885-15/s320x320/e35/12237511_444845689040315_1101385461_n.jpg", // Just because we can
         "rem hadley", // And because he's 13
 
@@ -20,11 +20,13 @@ function is(x) {
         "тринадцать", // Russia
         "trece", // Spanish
         "13+0i", //Imaginary 13's
-        "13 + 13i",
-        "13i"
-    ]
+        "13+13i",
+        "13i",
+        "xiii"
+    ];
 
-    if (thirteenStrings.indexOf(x.toLowerCase()) > -1) {
+    x = x.toString().toLowerCase().trim();
+    if (thirteenStrings.indexOf(x) > -1) {
         x = 13;
     }
 
